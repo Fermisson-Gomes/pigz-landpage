@@ -10,27 +10,32 @@ export default function StoreForm() {
 
 
   const handleChange = (event) => {
-    let {value} = event.target;
+    let { value } = event.target;
     if (event.target.id === "nome_input") {
       setNome(value)
     }
     if (event.target.id === "cnpj_input") {
       setCnpj(value)
-    } 
+    }
   }
 
   const handleClick = () => {
-    const {formValues, setFormValues } = formContext
-    const newValues = {...formValues, loja: {nome, cnpj, tipo}}
+    const { formValues, setFormValues } = formContext
+    const newValues = { ...formValues, loja: { nome, cnpj, tipo } }
     setFormValues(newValues)
   }
 
   return (
-    <section>
-      <h2>Me conta um pouco sobre a sua loja</h2>
+    <section class="form">
+      <div class="form-title">
+        <h3 id='title'>Me conta um pouco sobre a sua loja</h3>
+      </div>
       <form>
-      <label>
-        Nome da loja
+        <div class="input">
+
+          <label>
+            Nome da loja
+          </label>
           <input
             type='text'
             placeholder='padaria do josé'
@@ -38,9 +43,13 @@ export default function StoreForm() {
             value={nome}
             onChange={handleChange}
           />
-        </label>
-        <label>
-        CNPJ da loja
+        </div>
+
+        <div class="input">
+
+          <label>
+            CNPJ da loja
+          </label>
           <input
             type='text'
             placeholder='12.345.678/0001-99'
@@ -48,9 +57,13 @@ export default function StoreForm() {
             value={cnpj}
             onChange={handleChange}
           />
-        </label>
-        <label>
-        Tipo de loja
+        </div>
+
+        <div class="input">
+
+          <label>
+            Tipo de loja
+          </label>
           <select
             id='tipo_select'
             value={tipo}
@@ -58,8 +71,10 @@ export default function StoreForm() {
           >
             <option value="" disabled hidden>selecione</option>
           </select>
-        </label>
-        <div>
+        </div>
+
+
+        <div class="form-button" id="button">
           <button type="button" onClick={handleClick}>Confirmar</button>
         </div>
       </form>

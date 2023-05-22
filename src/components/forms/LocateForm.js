@@ -12,7 +12,7 @@ export default function LocateForm() {
   const formContext = useContext(FormContext)
 
   const handleChange = (event) => {
-    let {value} = event.target;
+    let { value } = event.target;
     if (event.target.id === "cep_input" & value.length <= 8) {
       value = value.replace(/\D/g, '');
       value = value.replace(/^(\d{5})(\d)/, '$1-$2');
@@ -31,17 +31,22 @@ export default function LocateForm() {
   }
 
   const handleClick = () => {
-    const {formValues, setFormValues } = formContext
-    const newValues = {...formValues, localizacao: {cep, estado, cidade, endereco, numero, complemento}, local: false, estabelecimento: true}
+    const { formValues, setFormValues } = formContext
+    const newValues = { ...formValues, localizacao: { cep, estado, cidade, endereco, numero, complemento }, local: false, estabelecimento: true }
     setFormValues(newValues)
   }
 
   return (
-    <section>
-      <h2>Onde fica a sua loja?</h2>
+    <section class="form">
+      <div class="form-title">
+        <h3 id='title'>Onde fica a sua loja?</h3>
+      </div>
       <form>
-        <label htmlFor='cep_input' >
-          Cep
+        <div class="input">
+
+          <label htmlFor='cep_input' >
+            Cep
+          </label>
           <input
             type='text'
             placeholder='00000-00'
@@ -49,29 +54,38 @@ export default function LocateForm() {
             value={cep}
             onChange={handleChange}
           />
-        </label>
-        <label htmlFor='estado_select'>
-          Estado
-          <select
-            id='estado_select'
-            value={estado}
-            onChange={(e) => setEstado(e.target.value)}
-          >
-            <option value="" disabled hidden>UF</option>
-          </select>
-        </label>
-        <label htmlFor='cidade_select'>
-          Cidade
-          <select
-            id='cidade_select'
-            value={cidade}
-            onChange={(e) => setCidade(e.target.value)}
-          >
-            <option value="" disabled hidden>selecione</option>
-          </select>
-        </label>
-        <label>
-          Endereço
+        </div>
+        <div class="pair-input">
+          <div class="input small">
+            <label htmlFor='estado_select'>
+              Estado
+            </label>
+            <select
+              id='estado_select'
+              value={estado}
+              onChange={(e) => setEstado(e.target.value)}
+            >
+              <option value="" disabled hidden>UF</option>
+            </select>
+          </div>
+          <div class="input great">
+
+            <label htmlFor='cidade_select'>
+              Cidade
+            </label>
+            <select
+              id='cidade_select'
+              value={cidade}
+              onChange={(e) => setCidade(e.target.value)}
+            >
+              <option value="" disabled hidden>selecione</option>
+            </select>
+          </div>
+        </div>
+        <div class="input">
+          <label>
+            Endereço
+          </label>
           <input
             type='text'
             placeholder='Avenida Maringa'
@@ -79,28 +93,37 @@ export default function LocateForm() {
             value={endereco}
             onChange={handleChange}
           />
-        </label>
-        <label>
-          Numero
-          <input
-            type='text'
-            placeholder='123'
-            id='numero_input'
-            value={numero}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Complemento
-          <input
-            type='text'
-            placeholder='casa, lote'
-            id='complemento_input'
-            value={complemento}
-            onChange={handleChange}
-          />
-        </label>
-        <div>
+        </div>
+        <div class="pair-input">
+
+          <div class="input small">
+            <label>
+              Numero
+            </label>
+            <input
+              type='text'
+              placeholder='123'
+              id='numero_input'
+              value={numero}
+              onChange={handleChange}
+            />
+          </div>
+          <div class="input great">
+
+            <label>
+              Complemento
+            </label>
+            <input
+              type='text'
+              placeholder='casa, lote'
+              id='complemento_input'
+              value={complemento}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        <div class="form-button" id="button">
           <button type="button" onClick={handleClick}>Proximo</button>
         </div>
       </form>
