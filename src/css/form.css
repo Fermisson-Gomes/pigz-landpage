@@ -1,0 +1,168 @@
+@media screen and (min-width: 200px) and (max-width: 767px) {
+
+  .form-content {
+    background-image: linear-gradient(to left, #FA641E, #FF881F);
+    font-family: 'Poppins', Bold;
+    color: #FFFFFF;
+    min-height: 1015px;
+    z-index: 1;
+  }
+
+  .form-intro {
+    display: flex;
+  }
+
+  .form-text {
+    z-index: 3;
+  }
+  .form-text h3 {
+    max-width: 80%;
+    font-size: 40px;
+    margin: 32px 16px 20px;
+  }
+  .form-text p {
+    max-width: 90%;
+    font-size: 16px;
+    margin: 0 auto 20px;
+  }
+  
+  .form-img {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .form {
+    background-color: #FFFFFF;
+    color: #333333;
+    max-width: 90%;
+    min-height: 550px;
+    margin: 20px auto;
+    padding: 32px 24px;
+    border-radius: 30px;
+    text-align: left;
+  }
+
+  .form h3 {
+    font-size: 28px;
+    font-family: 'Poppins', SemiBold;
+  }
+
+  #title {
+    margin-bottom: 24px;
+  }
+
+  .form .form-title p {
+    font-size: 13px;
+    font-family: 'Poppins', Regular;
+    margin-bottom: 24px;
+  }
+
+  .form span {
+    display:block;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 20px 0;
+    color: #666666;
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input input {
+    margin-bottom: 20px;
+  }
+
+  .input input[type="text"] {
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid #999999;
+  }
+
+  input[type="text"]::placeholder {
+    padding: 14px auto 14px 16px;
+    color: #CCCCCC;
+
+  }
+
+  .input input[type="email"] {
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid #999999;
+  }
+
+  .input input[type="email"]::placeholder {
+    padding: 14px auto 14px 16px;
+    color: #CCCCCC;
+
+  }
+
+  .input input[type="tel"] {
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid #999999;
+  }
+
+  .input input[type="tel"]::placeholder {
+    padding: 14px auto 14px 16px;
+    color: #CCCCCC;
+
+  }
+
+  .input label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  .input select {
+    width: 100%;
+    height: 48px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    color: #CCCCCC;
+  }
+
+  .pair-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .pair-input .small{
+    width: 40%;
+    margin-right: 15px;
+  }
+
+  .pair-input .great {
+    width: 70%;
+  }
+
+  .form-button button {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', Medium;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    margin: 13px auto;
+    width: 100%;
+  }
+
+  #button {
+    margin-top: 65px;
+  }
+
+  .form-button {
+    background-color: #FA641E;
+    text-align: center;
+    border-radius: 16px;
+    bottom: 24px;
+  }
+}
