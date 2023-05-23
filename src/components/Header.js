@@ -7,7 +7,7 @@ function Header() {
       <div class="header-div">
         <p>Já sou parceiro</p>
       </div>
-    </header>
+    </header> 
   )
 }
 
