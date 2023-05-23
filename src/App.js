@@ -96,6 +96,7 @@ function App() {
           </div>
         </div>
         <Footer />
+        <hr id="last" />
       </main>
     </div>
   );
